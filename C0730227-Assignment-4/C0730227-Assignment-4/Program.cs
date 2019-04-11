@@ -33,8 +33,20 @@ namespace C0730227_Assignment_4
                     Beowulf.Add(ln);
                 }
                 file.Close();
-                Console.WriteLine
+                Console.WriteLine($"File has {counter} lins. ");
             }
+        }
+        public int FindNumberOfBlankSpace(string line)
+        {
+
+            int countletters = 0;
+            int countSpaces = 0;
+            foreach (char c in line)
+            {
+                if (char.IsLetter(c)) { counterletters++; }
+                if (char.IsWhiteSpace(c)) { countSpaces++; }
+            }
+            return countSpaces;
         }
     }
 }
