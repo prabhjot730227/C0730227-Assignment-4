@@ -17,12 +17,17 @@ namespace C0730227_Assignment_4
             Program p = new Program();
             p.Beowulf = new ArrayList();
             p.Run();
+            p.ProcessArrayList();
         }
 
         public void Run()
         {
             this.ReadTextFiles();
+         
+
         }
+    
+
         public void ReadTextFiles()
         {
             //Read file using StreamReader. Reads file line by line
@@ -59,8 +64,38 @@ namespace C0730227_Assignment_4
                 }
             }
             return countSpaces;
+
+        }
+
+
+
+
+
+        public void ProcessArrayList()
+        {
+            int LineNumber = 0;
+            foreach (var line in Beowulf)
+            {
+
+                
+                if (ContainsWord(line.ToString().ToLower(), "sea") && ContainsWord(line.ToString().ToLower(), "fare"))
+                {
+
+                    Console.WriteLine("line number is: {0}", LineNumber);
+                    LineNumber++;
+                }
+            }
+        }
+        public bool ContainsWord(string line, string word)
+        {
+            if (line.Contains(word) == true)
+            {
+                return true;
+            }
+            return false;
         }
 
 
     }
+
 }
