@@ -18,6 +18,7 @@ namespace C0730227_Assignment_4
             p.Beowulf = new ArrayList();
             p.Run();
             p.ProcessArrayList();
+
         }
 
         public void Run()
@@ -67,10 +68,6 @@ namespace C0730227_Assignment_4
 
         }
 
-
-
-
-
         public void ProcessArrayList()
         {
             int LineNumber = 0;
@@ -78,7 +75,7 @@ namespace C0730227_Assignment_4
             {
 
                 
-                if (ContainsWord(line.ToString().ToLower(), "sea") && ContainsWord(line.ToString().ToLower(), "fare"))
+                if (ContainsWord(line.ToString().ToLower(), "fare") && !(ContainsWord(line.ToString().ToLower(), "war")))
                 {
 
                     Console.WriteLine("line number is: {0}", LineNumber);
