@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
+using System.IO;
 
 namespace C0730227_Assignment_4
 {
     class Program
     {
         ArrayList Beowulf;
+
         static void Main(string[] args)
         {
             Program p = new Program();
@@ -36,17 +39,6 @@ namespace C0730227_Assignment_4
                 Console.WriteLine($"File has {counter} lins. ");
             }
         }
-        public int FindNumberOfBlankSpace(string line)
-        {
-
-            int countletters = 0;
-            int countSpaces = 0;
-            foreach (char c in line)
-            {
-                if (char.IsLetter(c)) { counterletters++; }
-                if (char.IsWhiteSpace(c)) { countSpaces++; }
-            }
-            return countSpaces;
-        }
+       
     }
 }
